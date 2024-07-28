@@ -18,4 +18,14 @@ class BankApp {
     public static void main(String[] args) {
         // ... (buat objek Bank, tampilkan menu, tangani input pengguna)
     }
+
+import javax.swing.*;
+
+public class BankZeynCorporation {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Bank Zeyn Corporation");
+        // ... (komponen UI: label, tombol, text field, dll)
+        frame.setVisible(true);
+    }
 }
+
