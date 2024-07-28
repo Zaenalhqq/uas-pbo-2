@@ -1,0 +1,52 @@
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+class Customer {
+    int id;
+    String name;
+    String address;
+
+    // Constructor, getters, and setters
+}
+
+class Account {
+    int id;
+    int customerId;
+    String accountNumber;
+    double balance;
+    String accountType;
+
+    // Constructor, getters, and setters
+}
+
+class Transaction {
+    int id;
+    int accountId;
+    double amount;
+    String transactionType;
+    Date transactionDate;
+
+    // Constructor, getters, and setters
+}
+
+class Bank {
+    private Connection connection;
+
+    public Bank(String url, String user, String password) throws SQLException {
+        connection = DriverManager.getConnection(url, user, password);
+    }
+
+    // Methods for creating customers, accounts, transactions, deposits, withdrawals, transfers, etc.
+    // Example:
+    public void createCustomer(Customer customer) throws SQLException {
+        String sql = "INSERT INTO customers (name, address) VALUES (?, ?)";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, customer.getName());
+        statement.setString(2, customer.getAddress());
+        statement.executeUpdate();
+        // ...
+    }
+
+    // ... other methods
+}
