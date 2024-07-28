@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) throws SQLException {
+        Bank bank = new Bank("jdbc:mysql://localhost:3306/bank", "your_username", "your_password");
+
+        // Example usage:
+        Customer customer = new Customer();
+        customer.setName("zaenal nurhaqiqi");
+        customer.setAddress("026 Main St");
+        bank.createCustomer(customer);
+    }
+}
